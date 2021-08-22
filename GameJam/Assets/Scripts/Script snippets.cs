@@ -19,7 +19,7 @@ public class Scriptsnippets : MonoBehaviour
 }
 
 
-TIMER!
+|||||TIMER!|||||
 
 timer = value;
 
