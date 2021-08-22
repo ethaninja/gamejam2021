@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
+
 public class Scriptsnippets : MonoBehaviour
 {
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -31,4 +32,9 @@ if(timer <= 0)
     timer = value;
     //effect script here, for example: spawn object.
     }
+
+
+
+    
+    */
 }
