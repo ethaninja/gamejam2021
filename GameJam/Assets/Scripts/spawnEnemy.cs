@@ -28,12 +28,12 @@ public class spawnEnemy : MonoBehaviour
 
                     EnemyAngle myEnemyAngle = new EnemyAngle(Random.Range(10, 25));
 
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 15));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 15));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 15));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 15));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 15));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 15));
+                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
 
             }
 
