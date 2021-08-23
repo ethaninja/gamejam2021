@@ -12,21 +12,19 @@ public class PlayerCombat : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             
-            Attack();
+            PerformAttack();
             
         }
 
     }
 
-    void Attack()
+    public void PerformAttack()
     {
         //play attack animation
-        
-
         //Detect enemies in range
+        //Damage enemies
 
-
-        //Damage enemiesd
+        RapierFunction myRapierFunction = GetComponent<RapierFunction>();
 
 
     }
