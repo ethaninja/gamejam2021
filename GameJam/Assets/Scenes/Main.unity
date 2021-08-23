@@ -427,7 +427,7 @@ GameObject:
   - component: {fileID: 970760649}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,8 +672,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  mainCamera: {fileID: 0}
   rb: {fileID: 1398219472}
-  movement: {x: 0, y: 0, z: 0}
 --- !u!114 &1398219471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -703,7 +706,7 @@ MonoBehaviour:
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 970760648}
 --- !u!54 &1398219472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -718,7 +721,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1001 &1589452133
 PrefabInstance:
