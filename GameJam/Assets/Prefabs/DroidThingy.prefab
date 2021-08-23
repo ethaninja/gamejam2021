@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 1590409427163538873}
   - component: {fileID: 4679917475695837123}
   - component: {fileID: 1268042089551998469}
+  - component: {fileID: 919132149605926373}
   m_Layer: 0
   m_Name: DroidThingy
   m_TagString: Untagged
@@ -254,6 +255,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 3, z: 2.5}
   m_Center: {x: 0, y: 1.5, z: 1.91}
+--- !u!114 &919132149605926373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed68de8855ae4684a99759cf583b39fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inRange: 0
+  animatorRef: {fileID: 4679917475695837123}
 --- !u!1 &2159621386155728930
 GameObject:
   m_ObjectHideFlags: 0
