@@ -200,6 +200,8 @@ GameObject:
   - component: {fileID: 4679917475695837123}
   - component: {fileID: 1268042089551998469}
   - component: {fileID: 919132149605926373}
+  - component: {fileID: 2054247829}
+  - component: {fileID: 2054247828}
   m_Layer: 0
   m_Name: DroidThingy
   m_TagString: Untagged
@@ -272,10 +274,41 @@ MonoBehaviour:
   rateOfFire: 1
   canFire: 0
   target: {fileID: 0}
+  rotationToTarget: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
-  inRange: 0
   animatorRef: {fileID: 4679917475695837123}
+  inRange: 0
   moveSpeed: 8
+  turnSpeed: 5
+--- !u!54 &2054247829
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
+--- !u!65 &2054247828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.37, y: 3.18, z: 2.06}
+  m_Center: {x: 0, y: 1.71, z: -0.04}
 --- !u!1 &2159621386155728930
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +659,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1636435332216064785}
   - component: {fileID: 8777128326969396143}
-  - component: {fileID: 906464745}
   m_Layer: 0
   m_Name: Mesh_DroidThingy01
   m_TagString: Untagged
@@ -720,19 +752,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.01768613, y: -0.00009766221, z: 0.021262363}
     m_Extent: {x: 0.0709322, y: 0.096547194, z: 0.06614868}
   m_DirtyAABB: 0
---- !u!65 &906464745
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359029060702042378}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1418644, y: 0.13229735, z: 0.19309436}
-  m_Center: {x: 0.01768613, y: -0.021262372, z: 0.09333313}
 --- !u!1 &6394800488306816219
 GameObject:
   m_ObjectHideFlags: 0
