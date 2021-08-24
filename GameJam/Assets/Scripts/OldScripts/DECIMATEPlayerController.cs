@@ -1,41 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class DECIMATEPlayerController : MonoBehaviour
 {
-    public float moveSpeed;
-    private Rigidbody myRigidbody;
-
-    private Vector3 moveInput;
-    private Vector3 moveVelocity;
-
+    public float speed = 5f;
+    
     [SerializeField]
     private LayerMask groundMask;
 
     [SerializeField]
     private Camera mainCamera;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private Rigidbody rb;
+    
+   
+   Vector3 movement;
+
+
+    void Start() 
     {
-        myRigidbody = GetComponent<Rigidbody>();
+        mainCamera = Camera.main;    
     }
 
-    // Update is called once per frame
+    // Start is called before the first frame update
     void Update()
     {
-       moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-       moveVelocity = moveInput * moveSpeed; 
-       Aim();
-          
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.z = Input.GetAxisRaw("Vertical");
+        Aim();
+
+       // int angle = 50;
+       //Vector3 guarding = Quaternion.Euler(0, 0, 0) * Vector3.right;
+
+
+       /* if(Input.GetMouseButton(0))
+        {
+            transform.Rotate(0, -50 * Time.deltaTime, 0);
+        }
+        else 
+        {
+            transform.Rotate(0, 50 * Time.deltaTime, 0);
+        }*/
+
     }
 
+   
     void FixedUpdate()
     {
-        myRigidbody.velocity = moveVelocity;
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
- private void Aim()
+
+
+
+    private void Aim()
     {
         var (sucess, position) = GetMousePosition();
         if(sucess)
@@ -60,5 +81,5 @@ public class PlayerController : MonoBehaviour
             return(sucess: false, position: Vector3.zero);
         }
     }
-    
+
 }

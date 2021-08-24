@@ -7,8 +7,8 @@ public class Timer : MonoBehaviour
 {
     public Text timerTextMinutes;
     public Text timerTextSeconds;
-    public Text bestTimeMins;
-    public Text bestTimeSecs;
+    //public Text bestTimeMins;
+    //public Text bestTimeSecs;
 
     public float timerMinutes;
     public float timerSeconds;
@@ -20,11 +20,11 @@ public class Timer : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         bestTimeMins.text = PlayerPrefs.GetFloat("BestTimeMins", 0).ToString();
         bestTimeSecs.text = PlayerPrefs.GetFloat("BestTimeSecs", 0).ToString();
-    }
+    }*/
 
     void Awake()
     {
