@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class spawnEnemy : MonoBehaviour
 {
-    public float timer0 = 1;
     public GameObject ObjectToSpawn;
-          
+
+    [SerializeField]
+    public float timer0 = 1;
+    private objectPoolSample objectPool;
+    
+
     void Start()
     {
-        
+        objectPool = FindObjectOfType<objectPoolSample>();
     }
 
     // Update is called once per frame
@@ -23,18 +27,24 @@ public class spawnEnemy : MonoBehaviour
                     {
                         Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
                         Vector3 spawnPosition = transform.position + direction * radius;
-                        Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
+                        //Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
+                        GameObject newDroidThingy = objectPool.GetDroidThingy();
+                        newDroidThingy.transform.position = spawnPosition;
                     }
 
-                    EnemyAngle myEnemyAngle = new EnemyAngle(Random.Range(10, 25));
 
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
-                    SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
 
+                EnemyAngle myEnemyAngle = new EnemyAngle(Random.Range(10, 25));
+
+                SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+                SpawnEnemy(myEnemyAngle.NextAngle(), Random.Range(5, 55));
+
+                
+                
             }
 
 
@@ -65,3 +75,12 @@ public class EnemyAngle
         return CurrentAngle; 
     }
 }
+
+
+/*void SpawnEnemy(float angle, float radius)
+{
+    Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
+    Vector3 spawnPosition = transform.position + direction * radius;
+    //Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
+    GameObject newDroidThingy = objectPool.GetDroidThingy();
+}*/
