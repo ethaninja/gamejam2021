@@ -267,8 +267,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed68de8855ae4684a99759cf583b39fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 20
+  attackDamage: 10
+  rateOfFire: 1
+  canFire: 0
+  target: {fileID: 0}
+  targetPos: {x: 0, y: 0, z: 0}
   inRange: 0
   animatorRef: {fileID: 4679917475695837123}
+  moveSpeed: 8
 --- !u!1 &2159621386155728930
 GameObject:
   m_ObjectHideFlags: 0
