@@ -273,13 +273,11 @@ MonoBehaviour:
   attackDamage: 10
   rateOfFire: 1
   canFire: 0
-  target: {fileID: 7010350362253527877, guid: 1270836aa5d305e4f8cd6b509535a141, type: 3}
-  rotationToTarget: {fileID: 0}
+  target: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   animatorRef: {fileID: 4679917475695837123}
   inRange: 0
   moveSpeed: 8
-  turnSpeed: 5
 --- !u!54 &2054247829
 Rigidbody:
   m_ObjectHideFlags: 0
