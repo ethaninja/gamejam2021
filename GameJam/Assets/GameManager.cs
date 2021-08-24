@@ -9,29 +9,35 @@ public class GameManager : MonoBehaviour
 {   
     public static bool GamePaused = false;
     public GameObject PauseMenuUI;
-
+    [SerializeField]
+    PlayerController mouseLook;
+   
     
     // Update is called once per frame
     //PAUSE MENU
     void Update()
-    {
-
+    {     
+        
     if (Input.GetKeyDown(KeyCode.Escape))
     {
+       
        if (GamePaused) 
        {
            Resume();
        } else
        {
            Pause();
+           
        }
+        
     }   
- }
+     }
     public void Resume()
     {
      PauseMenuUI.SetActive(false);
      Time.timeScale = 1f;
      GamePaused = false;
+     mouseLook.enabled = true; 
     }
 
     void Pause()
@@ -39,6 +45,7 @@ public class GameManager : MonoBehaviour
      PauseMenuUI.SetActive(true);
      Time.timeScale = 0f;
      GamePaused = true;
+     mouseLook.enabled = false;
     }
 
  public void LoadMenu()
