@@ -48,10 +48,11 @@ public class Enemy : MonoBehaviour
         if(other.tag == "Player")
         {
             inRange = true;
-            if(fireTime >= rateOfFire)
+            animatorRef.SetTrigger("inRange");
+            /*if(fireTime >= rateOfFire)
             {
                 Attack();
-            }
+            }*/
             
         }    
     }
@@ -66,9 +67,9 @@ public class Enemy : MonoBehaviour
     }
 
 
-    void Attack()
+    /*void Attack()
     {
         animatorRef.SetTrigger("inRange");
         Debug.Log("rawr!");
-    }
+    }*/
 }

@@ -626,6 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1636435332216064785}
   - component: {fileID: 8777128326969396143}
+  - component: {fileID: 906464745}
   m_Layer: 0
   m_Name: Mesh_DroidThingy01
   m_TagString: Untagged
@@ -719,6 +720,19 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.01768613, y: -0.00009766221, z: 0.021262363}
     m_Extent: {x: 0.0709322, y: 0.096547194, z: 0.06614868}
   m_DirtyAABB: 0
+--- !u!65 &906464745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6359029060702042378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1418644, y: 0.13229735, z: 0.19309436}
+  m_Center: {x: 0.01768613, y: -0.021262372, z: 0.09333313}
 --- !u!1 &6394800488306816219
 GameObject:
   m_ObjectHideFlags: 0
