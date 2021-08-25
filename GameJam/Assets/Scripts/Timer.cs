@@ -56,7 +56,7 @@ public class Timer : MonoBehaviour
        timerActive = false;    
    
         
-   if (endTimerMinutes < PlayerPrefs.GetFloat("BestTimeMins", 1000000))
+   if (endTimerMinutes > PlayerPrefs.GetFloat("BestTimeMins", 0))
         {
             PlayerPrefs.SetFloat("BestTimeMins", endTimerMinutes);
             bestTimeMins.text = endTimerMinutes.ToString();
@@ -64,7 +64,7 @@ public class Timer : MonoBehaviour
             Debug.Log("Savings Mins");
         }
 
-    if (endTimerSeconds < PlayerPrefs.GetFloat("BestTimeSecs", 1000000))
+    if (endTimerSeconds > PlayerPrefs.GetFloat("BestTimeSecs", 0))
         {
             PlayerPrefs.SetFloat("BestTimeSecs", endTimerSeconds);
             bestTimeSecs.text = endTimerSeconds.ToString();
@@ -73,7 +73,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-   /*public void ResetMins() 
+   public void ResetMins() 
   {
       PlayerPrefs.DeleteKey("BestTimeMins");
       bestTimeMins.text = "0";
@@ -83,5 +83,5 @@ public class Timer : MonoBehaviour
   {
       PlayerPrefs.DeleteKey("BestTimeSecs");
       bestTimeSecs.text = "0";
-  } */
+  } 
 }
