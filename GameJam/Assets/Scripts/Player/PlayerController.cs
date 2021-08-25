@@ -16,24 +16,32 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Camera mainCamera;
 
+    public PlayerHealth playerHealthRef;
+
     // Start is called before the first frame update
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
+        playerHealthRef = GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-       moveVelocity = moveInput * moveSpeed; 
-       Aim();
+        if(playerHealthRef.isAlive == true)
+        {
+            moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+         moveVelocity = moveInput * moveSpeed; 
+         myRigidbody.velocity = moveVelocity;
+         Aim();
+        }
+       
           
     }
 
     void FixedUpdate()
     {
-        myRigidbody.velocity = moveVelocity;
+        //myRigidbody.velocity = moveVelocity;
     }
  private void Aim()
     {

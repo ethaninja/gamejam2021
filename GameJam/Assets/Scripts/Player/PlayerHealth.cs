@@ -10,12 +10,26 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthChanger healthBar;
 
+    public bool isAlive;
+
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+    }
+
+    void Update()
+    {
+        if(currentHealth <= 0)
+        {
+            isAlive = false;
+        }
+        if(currentHealth > 0)
+        {
+            isAlive = true;
+        }
     }
 
 
