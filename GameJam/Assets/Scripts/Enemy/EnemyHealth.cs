@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
 
-    public int maxHealth = 100;
+    public int maxHealth = 50;
     public int currentHealth;
 
-    public HealthChangerPlayer healthBar;
+    public HealthChangerEnemy healthBar;
 
     public bool isAlive;
-    public Timer TimerReference;
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,6 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             isAlive = false;
-            TimerReference.stopTimer();
         }
         if(currentHealth > 0)
         {
@@ -36,9 +35,9 @@ public class PlayerHealth : MonoBehaviour
 
 
     
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Rapier")
         {
             TakeDamage(5);
         }

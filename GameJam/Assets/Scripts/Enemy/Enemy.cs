@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     void Awake() 
     {
         animatorRef.GetComponent<Animator>();
-        target = GameObject.Find("Model_Player"); //Although we can drag this into inspector, it's good
+        target = GameObject.Find("Player"); //Although we can drag this into inspector, it's good
         //practice to use code to assign things. Be carefull about how you do it though
         //as some ways are more resource heavier than others
         //ALSO, we need to get all the Input and Colliders/Rigidbody into the Player Parent Object
