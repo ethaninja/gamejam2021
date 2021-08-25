@@ -7,8 +7,8 @@ public class Timer : MonoBehaviour
 {
     public Text timerTextMinutes;
     public Text timerTextSeconds;
-    //public Text bestTimeMins;
-    //public Text bestTimeSecs;
+    public Text bestTimeMins;
+    public Text bestTimeSecs;
 
     public float timerMinutes;
     public float timerSeconds;
@@ -19,12 +19,12 @@ public class Timer : MonoBehaviour
     public float endTimerSeconds;
 
 
-    // Start is called before the first frame update
-    /*void Start()
+    //Start is called before the first frame update
+    void Start()
     {
         bestTimeMins.text = PlayerPrefs.GetFloat("BestTimeMins", 0).ToString();
         bestTimeSecs.text = PlayerPrefs.GetFloat("BestTimeSecs", 0).ToString();
-    }*/
+    }
 
     void Awake()
     {
@@ -54,9 +54,9 @@ public class Timer : MonoBehaviour
        endTimerMinutes = timerMinutes;
        endTimerSeconds = timerSeconds;
        timerActive = false;    
-   }
+   
         
-   /* if (endTimerMinutes < PlayerPrefs.GetFloat("BestTimeMins", 1000000))
+   if (endTimerMinutes < PlayerPrefs.GetFloat("BestTimeMins", 1000000))
         {
             PlayerPrefs.SetFloat("BestTimeMins", endTimerMinutes);
             bestTimeMins.text = endTimerMinutes.ToString();
@@ -73,7 +73,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-   public void ResetMins() 
+   /*public void ResetMins() 
   {
       PlayerPrefs.DeleteKey("BestTimeMins");
       bestTimeMins.text = "0";

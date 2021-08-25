@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     public HealthChanger healthBar;
 
     public bool isAlive;
-
+    public Timer TimerReference;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             isAlive = false;
+            TimerReference.stopTimer();
         }
         if(currentHealth > 0)
         {
