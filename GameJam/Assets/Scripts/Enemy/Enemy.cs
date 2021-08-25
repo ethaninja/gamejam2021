@@ -18,14 +18,18 @@ public class Enemy : MonoBehaviour
     public bool inRange;
     public float moveSpeed;
 
+    public EnemyHealth enemyHealthRef;
+
 
     // Start is called before the first frame update
     void Start()
     {
         
+        
     }
     void Awake() 
     {
+        enemyHealthRef = GetComponent<EnemyHealth>();
         animatorRef.GetComponent<Animator>();
         target = GameObject.Find("Player"); //Although we can drag this into inspector, it's good
         //practice to use code to assign things. Be carefull about how you do it though
@@ -37,15 +41,19 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Here we continue to update the target (players) position for the enemy so they know where to move 
-        //when the player moves
-        targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+        if(enemyHealthRef.isAlive == true)
+        {
+            //Here we continue to update the target (players) position for the enemy so they know where to move 
+            //when the player moves
+            targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
 
-        //Now we actively move the transform.position of the enemy object using Unity's MoveTowards function
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
+            //Now we actively move the transform.position of the enemy object using Unity's MoveTowards function
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
-        Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-        transform.LookAt(targetPosition);
+            Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
+            transform.LookAt(targetPosition);
+        }
+        
 
     }
 
