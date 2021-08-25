@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 629870023565052619}
   - component: {fileID: 629870024634717367}
   - component: {fileID: 3776270785567740924}
-  - component: {fileID: 1199742793}
   m_Layer: 5
   m_Name: enemyHealth
   m_TagString: Untagged
@@ -254,16 +253,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 629870024634717367}
---- !u!114 &1199742793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629870024634717364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccd71092d78e0994691d5dd251151d53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}

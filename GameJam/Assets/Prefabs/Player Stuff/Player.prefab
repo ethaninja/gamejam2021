@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1405652340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8598295165476188229}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5543069, y: 8.613999, z: 1.2858356}
+  m_Center: {x: 0, y: 4.3124843, z: 0}
 --- !u!95 &240827135
 Animator:
   serializedVersion: 3
@@ -31,19 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9faccfc09859049b62a66e541d1b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &1405652340
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8598295165476188229}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5543069, y: 8.613999, z: 1.2858356}
-  m_Center: {x: 0, y: 4.3124843, z: 0}
 --- !u!1 &8904230214396357356
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 0}
   isAlive: 0
+  TimerReference: {fileID: 0}
 --- !u!114 &309086160
 MonoBehaviour:
   m_ObjectHideFlags: 0
