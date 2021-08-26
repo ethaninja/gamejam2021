@@ -42,10 +42,25 @@ public class EnemyHealth : MonoBehaviour
         {
             TakeDamage(5);
         }
+
+
         if(currentHealth < 0)
         {
             currentHealth = 0;
             
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Trap1")
+        {
+            TakeDamage(5);
+        }
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+
         }
     }
 

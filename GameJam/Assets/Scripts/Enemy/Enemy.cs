@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public objectPoolSample objectPoolRef;
+    //public objectPoolSample objectPoolRef;
     //public GameObject DroidThingyPool = new Queue<GameObject>();
     public float health;
     public float attackDamage;

@@ -45,7 +45,12 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(5);
         }
-        if(currentHealth < 0)
+        if (other.gameObject.tag == "Trap1")
+        {
+            TakeDamage(10);
+        }
+
+        if (currentHealth < 0)
         {
             currentHealth = 0;
         }
