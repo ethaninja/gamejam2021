@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 
     public PlayerHealth playerHealthRef;
 
+    //public CharacterController controller;
+    //public Transform cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +33,12 @@ public class PlayerController : MonoBehaviour
     {
         if(playerHealthRef.isAlive == true)
         {
+         
             moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
-         moveVelocity = moveInput * moveSpeed; 
-         myRigidbody.velocity = moveVelocity;
-         Aim();
+            moveVelocity = moveInput * moveSpeed; 
+            myRigidbody.velocity = moveVelocity;
+            Aim();
+        
         }
        
           
@@ -41,15 +46,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //myRigidbody.velocity = moveVelocity;
+        myRigidbody.velocity = moveVelocity;
     }
  private void Aim()
     {
         var (sucess, position) = GetMousePosition();
-        if(sucess)
+        //var position = Input.mousePosition;
+        if (sucess)
         {
             var direction = position - transform.position;
             direction.y = 0;
+            
 
             transform.forward = direction;
         }
@@ -58,8 +65,11 @@ public class PlayerController : MonoBehaviour
 
     private (bool sucess, Vector3 position) GetMousePosition()
     {
+       /* Ray mouseRay = mainCamera.ScreenPointToRay(moveInput.mousePosition);
+        float midPoint = (transform.position - mainCamera.transform.position).magnitude * 0.5f;
+        transform.LookAtmouse(Ray.Origin + mouseRay.direction * midpoint);*/
         var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, groundMask))
+        if (Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, groundMask))
         {
             return (sucess: true, position: hitInfo.point);
         }

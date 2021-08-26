@@ -65,6 +65,7 @@ public class EnemyAngle
     {
         angle = Random.Range(15,25);
         step = increment;
+        
     }
 
     public int NextAngle()

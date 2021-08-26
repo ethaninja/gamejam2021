@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    
+    public objectPoolSample objectPoolRef;
+    //public GameObject DroidThingyPool = new Queue<GameObject>();
     public float health;
     public float attackDamage;
     public float rateOfFire;
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemyHealthRef.isAlive = true;
         
     }
     void Awake() 
@@ -53,7 +54,11 @@ public class Enemy : MonoBehaviour
             Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
             transform.LookAt(targetPosition);
         }
-        
+        if(enemyHealthRef.isAlive == false)
+        {
+            this.gameObject.SetActive(false);
+
+        }
 
     }
 

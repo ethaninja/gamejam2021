@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             isAlive = false;
+
         }
         if(currentHealth > 0)
         {
@@ -44,6 +45,7 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth < 0)
         {
             currentHealth = 0;
+            
         }
     }
 
