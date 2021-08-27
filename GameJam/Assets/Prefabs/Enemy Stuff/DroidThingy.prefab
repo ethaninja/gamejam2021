@@ -198,13 +198,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1590409427163538873}
   - component: {fileID: 4679917475695837123}
-  - component: {fileID: 2628354879769273584}
-  - component: {fileID: 1268042089551998469}
   - component: {fileID: 2054247828}
+  - component: {fileID: 1268042089551998469}
   - component: {fileID: 2054247829}
   - component: {fileID: 919132149605926373}
-  - component: {fileID: 6524958320019465453}
   - component: {fileID: 2017982726}
+  - component: {fileID: 6524958320019465453}
+  - component: {fileID: 2628354879769273584}
   - component: {fileID: 2811572294565009507}
   m_Layer: 0
   m_Name: DroidThingy
@@ -239,7 +239,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114884631528718083}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 09aca8a0f8cfa0b4fa50926f9ae0b4b1, type: 3}
+  m_Avatar: {fileID: 9000000, guid: e60126bfcb06b524789dcbe45f2ca66c, type: 3}
   m_Controller: {fileID: 9100000, guid: b3bf16ee3c153ac4dbd7c90305b881ab, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -249,33 +249,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2628354879769273584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114884631528718083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20e17c52ccab63643ba6068e8af882db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 2811572294565009507}
-  Player: {fileID: 8904230214396357357, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
---- !u!65 &1268042089551998469
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114884631528718083}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5, y: 3, z: 2.5}
-  m_Center: {x: 0, y: 0, z: 1.91}
 --- !u!65 &2054247828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -289,6 +262,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.37, y: 3.18, z: 2.06}
   m_Center: {x: 0, y: 0, z: -0.04}
+--- !u!65 &1268042089551998469
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 3, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 1.91}
 --- !u!54 &2054247829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -327,18 +313,8 @@ MonoBehaviour:
   inRange: 0
   moveSpeed: 8
   enemyHealthRef: {fileID: 2017982726}
---- !u!114 &6524958320019465453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114884631528718083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 335d7142b17dd5248bca2cf095a193cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  navAgentRef: {fileID: 0}
+  colliderRef: {fileID: 1268042089551998469}
 --- !u!114 &2017982726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +331,32 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 6098076891441649855}
   isAlive: 0
+--- !u!114 &6524958320019465453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335d7142b17dd5248bca2cf095a193cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2628354879769273584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e17c52ccab63643ba6068e8af882db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2811572294565009507}
+  Player: {fileID: 8904230214396357357, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
 --- !u!195 &2811572294565009507
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -365,7 +367,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,44 +21,38 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
 
     public EnemyHealth enemyHealthRef;
+    [SerializeField]
+    private NavMeshAgent navAgentRef;
+    [SerializeField]
+    private enemyFollow enemyFollowRef;
+
+    public BoxCollider[] collidersRef;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         enemyHealthRef.isAlive = true;
-        
     }
+
     void Awake() 
     {
         enemyHealthRef = GetComponent<EnemyHealth>();
         animatorRef.GetComponent<Animator>();
-       // target = GameObject.Find("Player"); //Although we can drag this into inspector, it's good
-        //practice to use code to assign things. Be carefull about how you do it though
-        //as some ways are more resource heavier than others
-        //ALSO, we need to get all the Input and Colliders/Rigidbody into the Player Parent Object
+        navAgentRef = this.GetComponent<NavMeshAgent>();
 
+        enemyFollowRef = this.GetComponent<enemyFollow>();
+        
+        collidersRef = this.GetComponents<BoxCollider>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if(enemyHealthRef.isAlive == true)
-        {
-            //Here we continue to update the target (players) position for the enemy so they know where to move 
-            //when the player moves
-           // targetPos = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-
-            //Now we actively move the transform.position of the enemy object using Unity's MoveTowards function
-           // transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-
-           // Vector3 targetPosition = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-            //transform.LookAt(targetPosition);
-        }
         if(enemyHealthRef.isAlive == false)
         {
-            this.gameObject.SetActive(false);
-
+           Die();
         }
 
     }
@@ -69,28 +64,30 @@ public class Enemy : MonoBehaviour
         if(other.tag == "Player")
         {
             inRange = true;
-            animatorRef.SetTrigger("inRange");
-            /*if(fireTime >= rateOfFire)
-            {
-                Attack();
-            }*/
-            
+            animatorRef.SetTrigger("inRange");            
         }    
     }
     void OnTriggerExit(Collider other) 
     {
         if(other.tag == "Player")
         {
-            fireTime = 0; //Resets the fire timer when the player leaves range
             inRange = false;
             animatorRef.SetTrigger("inRange");
         }
     }
 
-
-    /*void Attack()
+    void Die()
     {
-        animatorRef.SetTrigger("inRange");
-        Debug.Log("rawr!");
-    }*/
+        //this.gameObject.SetActive(false); //I will use this code in a timer to have 
+        //the bodies decay after a certain amount of time
+        animatorRef.SetTrigger("isAlive");
+        navAgentRef.enabled = false;
+        enemyFollowRef.enabled = false;
+        for(int i = 0; i < collidersRef.Length; i++)
+        {
+            collidersRef[i].enabled = false;
+        }
+    }
+
+
 }
