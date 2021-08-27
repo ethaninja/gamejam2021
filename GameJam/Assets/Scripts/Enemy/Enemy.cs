@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     public bool inRange;
     //public float moveSpeed;
 
-    public enemyHealth enemyHealthRef;
+    public EnemyHealth enemyHealthRef;
     [SerializeField]
     private NavMeshAgent navAgentRef;
     [SerializeField]
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
 
     void Awake() 
     {
-        enemyHealthRef = GetComponent<enemyHealth>();
+        enemyHealthRef = GetComponent<EnemyHealth>();
         animatorRef.GetComponent<Animator>();
         disappearTimer = 5;
         //healthBorderRef = GetComponent<GameObject>();

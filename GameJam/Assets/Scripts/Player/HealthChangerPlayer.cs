@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class healthChangerPlayer : MonoBehaviour
+public class HealthChangerPlayer : MonoBehaviour
 {
 
     public Slider slider;

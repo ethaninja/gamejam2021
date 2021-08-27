@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class timer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     public Text timerTextMinutes;
     public Text timerTextSeconds;
@@ -23,7 +23,7 @@ public class timer : MonoBehaviour
     void Start()
     {
         bestTimeMins.text = PlayerPrefs.GetFloat("BestTimeMins", 0).ToString();
-        bestTimeSecs.text = PlayerPrefs.GetFloat("BestTimeSecs", 0).ToString("f2");
+        bestTimeSecs.text = PlayerPrefs.GetFloat("BestTimeSecs", 0).ToString();
     }
 
     void Awake()
@@ -67,7 +67,7 @@ public class timer : MonoBehaviour
     if (endTimerSeconds > PlayerPrefs.GetFloat("BestTimeSecs", 0))
         {
             PlayerPrefs.SetFloat("BestTimeSecs", endTimerSeconds);
-            bestTimeSecs.text = endTimerSeconds.ToString("f2");
+            bestTimeSecs.text = endTimerSeconds.ToString();
             PlayerPrefs.Save();
             Debug.Log("Savings Secs");
         }

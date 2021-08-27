@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rapierFunction : MonoBehaviour
+public class RapierFunction : MonoBehaviour
 {
     private Animator animator;
 

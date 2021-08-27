@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class scriptSnippets : MonoBehaviour
+public class Scriptsnippets : MonoBehaviour
 {
     /*
     // Start is called before the first frame update

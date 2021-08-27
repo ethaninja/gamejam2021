@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 100;
     public int currentHealth;
 
-    public healthChangerPlayer healthBar;
+    public HealthChangerPlayer healthBar;
 
     public bool isAlive;
-    public timer TimerReference;
+    public Timer TimerReference;
     public GameObject GameOver;
 
     // Start is called before the first frame update

@@ -7,7 +7,7 @@ public class enemyFollow : MonoBehaviour
 {
     public NavMeshAgent enemyNavRef;
     public Transform Player;
-    public enemyHealth enemyHealthRef;
+    public EnemyHealth enemyHealthRef;
     public float speedTimer;
 
 
@@ -19,7 +19,7 @@ public class enemyFollow : MonoBehaviour
     }
     void Awake()
     {
-        enemyHealthRef = this.GetComponent<enemyHealth>();
+        enemyHealthRef = this.GetComponent<EnemyHealth>();
         enemyNavRef = this.GetComponent<NavMeshAgent>();
     }
 

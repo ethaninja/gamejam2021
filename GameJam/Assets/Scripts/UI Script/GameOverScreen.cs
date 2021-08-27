@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class menuController : MonoBehaviour
+public class GameOverScreen : MonoBehaviour
 {
-    public void ButtonPlay()
+    public void ButtonMainMenu()
     {
         //SceneManager.LoadScene(1);
-        Debug.Log("Starting game...");
+        Debug.Log("Loading Main Menu...");
     }
 
     

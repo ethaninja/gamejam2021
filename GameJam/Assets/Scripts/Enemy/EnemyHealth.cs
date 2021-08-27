@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
 
     public int maxHealth = 50;
     public int currentHealth;
 
-    public healthChangerEnemy healthBar;
+    public HealthChangerEnemy healthBar;
 
     public bool isAlive;
 

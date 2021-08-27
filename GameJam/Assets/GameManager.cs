@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static bool GamePaused = false;
     public GameObject PauseMenuUI;
     [SerializeField]
-    playerController mouseLook;
+    PlayerController mouseLook;
    
     
     // Update is called once per frame
