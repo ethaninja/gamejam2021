@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BestTime : MonoBehaviour
+public class bestTime : MonoBehaviour
 {
     public Text bestTimeMins;
     public Text bestTimeSecs;
-    public Timer TimerReference;
+    public timer TimerReference;
     
 
     // Start is called before the first frame update

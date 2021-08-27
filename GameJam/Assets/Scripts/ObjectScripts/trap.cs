@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trap : MonoBehaviour
+public class trap : MonoBehaviour
 {
     public float trapTimer;
     public float trapDamage;

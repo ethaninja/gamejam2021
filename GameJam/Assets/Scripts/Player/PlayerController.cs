@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class playerController : MonoBehaviour
 {
     public float moveSpeed;
     private Rigidbody myRigidbody;
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Camera mainCamera;
 
-    public PlayerHealth playerHealthRef;
+    public playerHealth playerHealthRef;
 
     //public CharacterController controller;
     //public Transform cam;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
-        playerHealthRef = GetComponent<PlayerHealth>();
+        playerHealthRef = GetComponent<playerHealth>();
     }
 
     // Update is called once per frame

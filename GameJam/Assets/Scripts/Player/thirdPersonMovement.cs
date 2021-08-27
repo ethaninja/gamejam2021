@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThirdPersonMovement : MonoBehaviour
+public class thirdPersonMovement : MonoBehaviour
 {
 
     public CharacterController controller;
@@ -12,7 +12,7 @@ public class ThirdPersonMovement : MonoBehaviour
     private Vector3 moveInput;
     private Vector3 moveVelocity;
 
-    public PlayerHealth playerHealthRef;
+    public playerHealth playerHealthRef;
 
     void Update()
     {

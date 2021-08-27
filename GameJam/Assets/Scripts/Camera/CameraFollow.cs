@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour
+public class cameraFollow : MonoBehaviour
 {
     public Transform target; 
     private GameObject playerRef;
