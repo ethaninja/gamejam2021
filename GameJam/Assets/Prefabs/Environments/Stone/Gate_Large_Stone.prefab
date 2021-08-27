@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8857987997512011695}
   m_Layer: 0
-  m_Name: gate
+  m_Name: Gate_Large_Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
