@@ -239,7 +239,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114884631528718083}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e60126bfcb06b524789dcbe45f2ca66c, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 5d6fde0814d7c0f48b1ee27404054765, type: 3}
   m_Controller: {fileID: 9100000, guid: b3bf16ee3c153ac4dbd7c90305b881ab, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -303,18 +303,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed68de8855ae4684a99759cf583b39fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
-  attackDamage: 10
-  rateOfFire: 1
-  canFire: 0
   target: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   animatorRef: {fileID: 4679917475695837123}
   inRange: 0
-  moveSpeed: 8
   enemyHealthRef: {fileID: 2017982726}
   navAgentRef: {fileID: 0}
-  colliderRef: {fileID: 1268042089551998469}
+  enemyFollowRef: {fileID: 0}
+  collidersRef: []
+  rbRef: {fileID: 0}
 --- !u!114 &2017982726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,8 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e17c52ccab63643ba6068e8af882db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2811572294565009507}
+  enemyNavRef: {fileID: 0}
   Player: {fileID: 8904230214396357357, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
+  enemyHealthRef: {fileID: 0}
 --- !u!195 &2811572294565009507
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
     private enemyFollow enemyFollowRef;
 
     public BoxCollider[] collidersRef;
+    public Rigidbody rbRef;
 
 
 
@@ -40,19 +41,20 @@ public class Enemy : MonoBehaviour
     {
         enemyHealthRef = GetComponent<EnemyHealth>();
         animatorRef.GetComponent<Animator>();
-        navAgentRef = this.GetComponent<NavMeshAgent>();
 
         enemyFollowRef = this.GetComponent<enemyFollow>();
-        
+        navAgentRef = this.GetComponent<NavMeshAgent>();
         collidersRef = this.GetComponents<BoxCollider>();
+        rbRef = this.GetComponent<Rigidbody>();
     }
 
 
     void Update()
     {
+
         if(enemyHealthRef.isAlive == false)
         {
-           Die();
+            Die();
         }
 
     }
@@ -81,8 +83,11 @@ public class Enemy : MonoBehaviour
         //this.gameObject.SetActive(false); //I will use this code in a timer to have 
         //the bodies decay after a certain amount of time
         animatorRef.SetTrigger("isAlive");
-        navAgentRef.enabled = false;
+
+        navAgentRef.isStopped = true;
+        Destroy(rbRef);
         enemyFollowRef.enabled = false;
+        
         for(int i = 0; i < collidersRef.Length; i++)
         {
             collidersRef[i].enabled = false;
