@@ -11,8 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public HealthChangerPlayer healthBar;
 
     public bool isAlive;
-    public Timer TimerReference;
-    public GameObject GameOver;
+    public Timer timerReference;
+    public GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,8 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             isAlive = false;
-            TimerReference.stopTimer();
-            GameOver.SetActive(enabled);
+            timerReference.stopTimer();
+            gameOver.SetActive(enabled);
             Time.timeScale = 0f;
         }
         if(currentHealth > 0)

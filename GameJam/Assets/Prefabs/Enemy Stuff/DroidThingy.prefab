@@ -313,6 +313,7 @@ MonoBehaviour:
   healthBorderRef: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
   collidersRef: []
   rbRef: {fileID: 0}
+  disappearTimer: 0
 --- !u!114 &2017982726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,6 +1110,10 @@ PrefabInstance:
     - target: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
       propertyPath: m_Name
       value: DroidCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7469852482284900339, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
       propertyPath: m_Pivot.x

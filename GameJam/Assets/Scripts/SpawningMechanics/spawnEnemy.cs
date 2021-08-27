@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawnEnemy : MonoBehaviour
 {
-    public GameObject ObjectToSpawn;
+    public GameObject droidToSpawn;
 
     [SerializeField]
     public float timer0 = 1;
@@ -27,7 +27,7 @@ public class spawnEnemy : MonoBehaviour
                     {
                         Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
                         Vector3 spawnPosition = transform.position + direction * radius;
-                        //Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
+                        //Instantiate(droidToSpawn, spawnPosition, Quaternion.identity);
                         GameObject newDroidThingy = objectPool.GetDroidThingy();
                         newDroidThingy.transform.position = spawnPosition;
                     }
@@ -82,6 +82,6 @@ public class EnemyAngle
 {
     Vector3 direction = Quaternion.Euler(0, angle, 0) * Vector3.right;
     Vector3 spawnPosition = transform.position + direction * radius;
-    //Instantiate(ObjectToSpawn, spawnPosition, Quaternion.identity);
+    //Instantiate(droidToSpawn, spawnPosition, Quaternion.identity);
     GameObject newDroidThingy = objectPool.GetDroidThingy();
 }*/
