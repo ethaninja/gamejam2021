@@ -204,8 +204,8 @@ GameObject:
   - component: {fileID: 919132149605926373}
   - component: {fileID: 2017982726}
   - component: {fileID: 6524958320019465453}
-  - component: {fileID: 2628354879769273584}
   - component: {fileID: 2811572294565009507}
+  - component: {fileID: 5566177796754071808}
   m_Layer: 0
   m_Name: DroidThingy
   m_TagString: Enemy
@@ -303,14 +303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed68de8855ae4684a99759cf583b39fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 8904230214396357356, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
+  target: {fileID: 0}
   targetPos: {x: 0, y: 0, z: 0}
   animatorRef: {fileID: 4679917475695837123}
   inRange: 0
   enemyHealthRef: {fileID: 2017982726}
   navAgentRef: {fileID: 0}
   enemyFollowRef: {fileID: 0}
-  healthBorderRef: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
+  healthBorderRef: {fileID: 7164104924318132010}
   collidersRef: []
   rbRef: {fileID: 0}
   disappearTimer: 0
@@ -342,7 +342,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 335d7142b17dd5248bca2cf095a193cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2628354879769273584
+--- !u!195 &2811572294565009507
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114884631528718083}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 7
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &5566177796754071808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,31 +377,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyNavRef: {fileID: 0}
-  Player: {fileID: 8904230214396357357, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
+  Player: {fileID: 0}
   enemyHealthRef: {fileID: 0}
-  speedTimer: 60
---- !u!195 &2811572294565009507
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114884631528718083}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 8
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 2
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  speedTimer: 0
 --- !u!1 &2159621386155728930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1107,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1590409427163538873}
     m_Modifications:
+    - target: {fileID: 7469852482284900238, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
       propertyPath: m_Name
       value: DroidCanvas
@@ -1209,6 +1213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
+--- !u!1 &7164104924318132010 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
+  m_PrefabInstance: {fileID: 344028640418375896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7164104924318132011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7469852482284900339, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
