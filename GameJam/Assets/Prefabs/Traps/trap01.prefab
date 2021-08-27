@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2858000801436717446}
   m_Layer: 0
   m_Name: trap01
-  m_TagString: Untagged
+  m_TagString: Trap1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trapTimer: 0
-  trapDamage: 0
+  trapDamage: 20
   trapSpinSpeed: 500
 --- !u!1 &6261422571527640077
 GameObject:
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2858000801436717449}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Trap1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6261422571527640077}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2315714335887308398}
