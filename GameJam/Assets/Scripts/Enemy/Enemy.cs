@@ -7,18 +7,18 @@ public class Enemy : MonoBehaviour
 {
     //public objectPoolSample objectPoolRef;
     //public GameObject DroidThingyPool = new Queue<GameObject>();
-    public float health;
-    public float attackDamage;
-    public float rateOfFire;
-    public bool canFire;
-    float fireTime;
+    //public float health;
+    //public float attackDamage;
+    //public float rateOfFire;
+    //public bool canFire;
+    //float fireTime;
 
 
     public GameObject target;
     public Vector3 targetPos;
     public Animator animatorRef;
     public bool inRange;
-    public float moveSpeed;
+    //public float moveSpeed;
 
     public EnemyHealth enemyHealthRef;
     [SerializeField]
