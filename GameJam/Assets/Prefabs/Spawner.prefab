@@ -94,5 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8023581947f7643b5fc0a9a8043917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToSpawn: {fileID: 2114884631528718083, guid: 5ef72bc91f9739d4b90d688065ca28b8, type: 3}
+  droidToSpawn: {fileID: 3127962455341788372, guid: a39d52a6679e95b4f8f955d40ac2f0f2, type: 3}
   timer0: 1

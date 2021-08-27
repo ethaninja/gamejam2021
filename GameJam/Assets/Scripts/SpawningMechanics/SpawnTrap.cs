@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnTrap : MonoBehaviour
+public class SpawnTrap : MonoBehaviour
 {
     public GameObject trapToSpawn;
     public Vector3 arenaSize;

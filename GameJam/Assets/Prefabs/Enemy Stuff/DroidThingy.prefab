@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 2017982726}
   - component: {fileID: 6524958320019465453}
   - component: {fileID: 2811572294565009507}
-  - component: {fileID: 5566177796754071808}
+  - component: {fileID: 3697761729565122666}
   m_Layer: 0
   m_Name: DroidThingy
   m_TagString: Enemy
@@ -364,7 +364,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5566177796754071808
+--- !u!114 &3697761729565122666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -947,6 +947,22 @@ Transform:
   m_Father: {fileID: 7149320720237275328}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1339122937565414969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7164104924318132010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e17c52ccab63643ba6068e8af882db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyNavRef: {fileID: 0}
+  Player: {fileID: 0}
+  enemyHealthRef: {fileID: 0}
+  speedTimer: 0
 --- !u!1 &7209856232696416863
 GameObject:
   m_ObjectHideFlags: 0

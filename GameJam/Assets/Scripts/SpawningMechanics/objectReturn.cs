@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectReturn : MonoBehaviour
+public class ObjectReturn : MonoBehaviour
 {
-    private objectPoolSample objectPool;
+    private ObjectPoolSample objectPool;
 
     private void Start()
     {
-        objectPool = FindObjectOfType<objectPoolSample>();
+        objectPool = FindObjectOfType<ObjectPoolSample>();
     }
 
     private void OnDisable()

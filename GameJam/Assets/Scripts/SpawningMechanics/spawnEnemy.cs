@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnEnemy : MonoBehaviour
+public class SpawnEnemy : MonoBehaviour
 {
     public GameObject droidToSpawn;
 
     [SerializeField]
     public float timer0 = 1;
-    private objectPoolSample objectPool;
+    private ObjectPoolSample objectPool;
     
 
     void Start()
     {
-        objectPool = FindObjectOfType<objectPoolSample>();
+        objectPool = FindObjectOfType<ObjectPoolSample>();
     }
 
     // Update is called once per frame

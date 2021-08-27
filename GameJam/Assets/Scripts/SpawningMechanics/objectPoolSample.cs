@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objectPoolSample : MonoBehaviour
+public class ObjectPoolSample : MonoBehaviour
 {
     [SerializeField]
     private GameObject DroidThingyPrefab;
