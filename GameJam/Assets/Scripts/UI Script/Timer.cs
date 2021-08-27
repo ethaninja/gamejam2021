@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         bestTimeMins.text = PlayerPrefs.GetFloat("BestTimeMins", 0).ToString();
-        bestTimeSecs.text = PlayerPrefs.GetFloat("BestTimeSecs", 0).ToString();
+        bestTimeSecs.text = PlayerPrefs.GetFloat("BestTimeSecs", 0).ToString("f2");
     }
 
     void Awake()
@@ -67,7 +67,7 @@ public class Timer : MonoBehaviour
     if (endTimerSeconds > PlayerPrefs.GetFloat("BestTimeSecs", 0))
         {
             PlayerPrefs.SetFloat("BestTimeSecs", endTimerSeconds);
-            bestTimeSecs.text = endTimerSeconds.ToString();
+            bestTimeSecs.text = endTimerSeconds.ToString("f2");
             PlayerPrefs.Save();
             Debug.Log("Savings Secs");
         }

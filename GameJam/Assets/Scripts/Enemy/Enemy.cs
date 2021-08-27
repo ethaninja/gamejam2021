@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private NavMeshAgent navAgentRef;
     [SerializeField]
-    private enemyFollow enemyFollowRef;
+    private EnemyFollow enemyFollowRef;
 
     public GameObject healthBorderRef;
     public BoxCollider[] collidersRef;
@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour
         disappearTimer = 5;
         //healthBorderRef = GetComponent<GameObject>();
 
-        enemyFollowRef = this.GetComponent<enemyFollow>();
+        enemyFollowRef = this.GetComponent<EnemyFollow>();
         navAgentRef = this.GetComponent<NavMeshAgent>();
         collidersRef = this.GetComponents<BoxCollider>();
         rbRef = this.GetComponent<Rigidbody>();
