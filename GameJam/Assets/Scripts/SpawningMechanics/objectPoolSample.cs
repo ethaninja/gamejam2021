@@ -38,6 +38,7 @@ public class ObjectPoolSample : MonoBehaviour
         {
             //if queue has <= 0 GameObject<Droid Thingy> it will create one in the scene to keep equilibrium
             GameObject DroidThingy = Instantiate(DroidThingyPrefab);
+            ReturnDroidThingy(DroidThingy);
             return DroidThingy;
         }
     }
