@@ -303,13 +303,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed68de8855ae4684a99759cf583b39fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 8904230214396357356, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
   targetPos: {x: 0, y: 0, z: 0}
   animatorRef: {fileID: 4679917475695837123}
   inRange: 0
   enemyHealthRef: {fileID: 2017982726}
   navAgentRef: {fileID: 0}
   enemyFollowRef: {fileID: 0}
+  healthBorderRef: {fileID: 7469852482284900338, guid: ceddb9d187df1bc4e9218e61f9684f26, type: 3}
   collidersRef: []
   rbRef: {fileID: 0}
 --- !u!114 &2017982726
@@ -355,6 +356,7 @@ MonoBehaviour:
   enemyNavRef: {fileID: 0}
   Player: {fileID: 8904230214396357357, guid: ebcf194f873ec6c4ca7451e041565851, type: 3}
   enemyHealthRef: {fileID: 0}
+  speedTimer: 60
 --- !u!195 &2811572294565009507
 NavMeshAgent:
   m_ObjectHideFlags: 0

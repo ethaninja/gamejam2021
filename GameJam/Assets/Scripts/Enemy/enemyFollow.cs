@@ -8,11 +8,13 @@ public class enemyFollow : MonoBehaviour
     public NavMeshAgent enemyNavRef;
     public Transform Player;
     public EnemyHealth enemyHealthRef;
+    public float speedTimer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedTimer = 60;
         Player = GameObject.Find("Player").transform;
     }
     void Awake()
@@ -25,7 +27,13 @@ public class enemyFollow : MonoBehaviour
     void Update()
     {
         enemyNavRef.destination = Player.position;
-         //Okay so it's not here that's causing it to spin on death
-        
+        //Okay so it's not here that's causing it to spin on death
+        speedTimer -= Time.deltaTime;
+        if(speedTimer <= 0)
+        {
+            enemyNavRef.speed += 2;
+            speedTimer = 60;
+        }
+
     }
 }

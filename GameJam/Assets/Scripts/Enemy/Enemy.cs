@@ -26,9 +26,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private enemyFollow enemyFollowRef;
 
+    public GameObject healthBorderRef;
     public BoxCollider[] collidersRef;
     public Rigidbody rbRef;
 
+    public float disappearTimer;
 
 
     // Start is called before the first frame update
@@ -41,6 +43,8 @@ public class Enemy : MonoBehaviour
     {
         enemyHealthRef = GetComponent<EnemyHealth>();
         animatorRef.GetComponent<Animator>();
+        disappearTimer = 5;
+        //healthBorderRef = GetComponent<GameObject>();
 
         enemyFollowRef = this.GetComponent<enemyFollow>();
         navAgentRef = this.GetComponent<NavMeshAgent>();
@@ -55,6 +59,11 @@ public class Enemy : MonoBehaviour
         if(enemyHealthRef.isAlive == false)
         {
             Die();
+            disappearTimer -= Time.deltaTime;
+            if (disappearTimer <= 0)
+            {
+                this.gameObject.SetActive(false);
+            }
         }
 
     }
@@ -87,6 +96,9 @@ public class Enemy : MonoBehaviour
         navAgentRef.isStopped = true;
         Destroy(rbRef);
         enemyFollowRef.enabled = false;
+
+        healthBorderRef.SetActive(false);
+        //disappearTimer = 5;
         
         for(int i = 0; i < collidersRef.Length; i++)
         {
